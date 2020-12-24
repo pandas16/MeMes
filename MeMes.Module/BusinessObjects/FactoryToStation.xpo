@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9e2a4ad4-dc21-41ee-ae2c-e3a9d0fdf778" namespace="MeMes.Module.BusinessObjects.fts" dataBaseShemaInfo="H4sIAAAAAAAEAOVY224bNxB9D5B/EPwcSrwtL8FaQWMnQdDUDeKk7euQHNpC5F1jd2U7f99ZS5YjOWndRpZQ90UQD4cgD2fmzHDLF1dn08EFNu2krvb3xJDvvRg/fVK+hBaPu7qBE3xb5XpAVlX7/Kqd7O+ddt3589Ho8vJyeKmGdXMykpyL0R+/vDuOp3gGbFK1HVQR95ar0t+v2qNdB4PyI4Qptv2W1+Mb5CvgBjqCMxy/hkiH/FKObqGl1auqx8ZdM8NytBgsJw8nbQ98Ok/Q4TjDtCWjVXBp+2Y2SW/TWGUvHDecReMd01oicxIdM9Kjl1kVRdTlaGG8XHxQT2dnVbtC4LswTfQc5pM35I7qcvQVumL9Vxz/Kc+vuQaeQrA5syLyyDRmYM4azYS0CMo6ch3e4UrLRxugS8j2CfPMNYKXzPgiMJ1BMMeFZSF4YzF7SDpsmvAHCvvm8695GcTbJl1oAxkAmDUpMc15Yl6FgkXQhVOFDID23qS/hS7y8t7p/HvdfG5P6/Ot5HMMSmcFngFXktjHggUDyLyO1gqedZB3Xf4j+XzDbhcJ7YU1yknDXAqU0AITIw8DE0C57CJldDCbju8l351kNCgloi4KkjChmPY8MIcxs+yEyWCMEko8VEbfxvHW/cyF81yRUoMm1ipzFqLkjINVMQlASBtn/Rp2I1+CYtZbERnVJM90YUxfkCmmQwxZSysTj1uVr/dNnWaxo07q3aTCrYiYERkDesEscBKx6JGBEp4lymkhC40F3s3rHxGxVY67kDKuvEEeBMtREmWfPPORsltwowIX3mjBNx3ia6x3ImhWJOdSEn2k008SyIIDyYRAr6J0iE49PkGzSVivZGSS+jGmZbaMRIx+nAcbvPfByMciaN5nqxK9MGQBfcmi4uWiMyzrCC54HeDhSta6dv0f/LzDMr1JT2+idB130Pt+OzWrSEI6kq9CaU41yyjmvUnUslgesRBKhmKjNWtBbhfFSgVMkp4ZDCPXTDtJjwyRDQsSRC4ihUFx96PBD4b1Dd2dVKmQpIIYqe300TEdhGOOCjLTOoogfUiWP5iGLYN46+JlecoRBZNJ0UMao6fSTE/qAi2gst4E7R+PeIFB8iQ4BllSTFutWQjUfNtsTeBF5j7dv+/+Vw3Yf5zzfQR7Mb41KfvPsZjoIuI1OBjN4d/m327Hh3jx6uq8wbYdHkIHwwvJh/LZYDG934+GesifDQ5m027W4H6Fs66B6bPB+1mYTuLP+OVj/Rmr/UBdpiBZokzlqD2Uo5strvc7mELbYts74MNsebvlT4mOhnlytTjXHDqe5RWIMrW+wHXDObpuewAtjj9V8RSqE0x0Z/14fjXfOkNJN3OOTTfZ8dm+c4zyDVbYUHgd1GdnWHXtIkbvwCvGh9hOTujv6wmFwtqK1bnrZUez6bSPmpd4CheTuqGgyEDupnxZn3n6pBytfeQf/wnwR7J7DRgAAA==" generateConnectionHelper="true" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" connectionStringName="fts" createdInVersion="20.2.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="20.2.4.0" name="fts" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="248e4910-abff-46ee-9cbe-d2531dd66e9d">
+      <xpObject Id="3f918060-c698-442e-82e8-629e92f355c4" name="Factory" baseClass="XPObject" userFileName="Factory" designerFileName="Factory.Designer" className="Factory" virtualName="Factory" customAttributes="DevExpress.Persistent.Base.DefaultClassOptions">
+        <fields>
+          <generalXpObjectHasFields Id="5e15aab3-77e6-490c-9c81-2c0e7def39e0">
+            <field Id="b0dbb7ff-5c0c-4efa-8764-127ea378001e" name="FactoryNo" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="10" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e7e204ba-8da7-4c0b-8e8c-1b879ae1eadb">
+            <field Id="0f04ea92-695b-4fa1-8017-bb967ef9ad4b" name="FactoryName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f2b6b3e4-20b3-4f8f-99cf-05b3b7dbe0cc">
+            <field Id="546afaaa-76dd-400d-93b5-ca458352bae7" name="RemarkOfFactory" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="Unlimited" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="e3749c8b-8895-4a7f-8c62-3c7a21f696b9" sourceCollectionName="Workshops" name="WorkshopReferencesFactory" targetFieldName="Fatory">
+            <xpObjectMoniker Id="cb34f3a9-a032-40c5-b6ae-94c7710f4b2b" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="ae9619cf-636f-446b-b850-221516496dbc">
+            <collectionField Id="d2a55e47-f8d5-4df9-8159-fbe3c53a8527" name="Workshops" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="32ed172b-eb37-4f8a-b808-bd5d2d8a774f">
+      <xpObject Id="cb34f3a9-a032-40c5-b6ae-94c7710f4b2b" name="Workshop" baseClass="XPObject" userFileName="Workshop" designerFileName="Workshop.Designer" className="Workshop" virtualName="Workshop" customAttributes="DevExpress.Persistent.Base.DefaultClassOptions">
+        <fields>
+          <generalXpObjectHasFields Id="d049778c-f02e-4f17-a58e-ea21c44b2d76">
+            <field Id="91763826-8dbc-41ed-835a-1a8008c780b6" name="WorkshopNo" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="10" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8713d101-feba-4738-8d78-b47a82a116ff">
+            <field Id="a331c455-5c13-490b-8ecf-f816fa663131" name="WorkshopName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2f01e9fb-202a-4160-a03e-7079ec8b63d2">
+            <field Id="90189034-1a43-43f0-bc20-0a73cd1aead1" name="RemarkOfWorkshop" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="Unlimited" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1022c47c-e92e-49b8-8c95-2f3c1b99b858">
+            <field Id="10b6971c-7ea9-4566-82ea-1bcbf4272d0c" name="Fatory" virtualColumnType="Factory" logicalType="Factory" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="6594308b-eb5d-4942-8863-92ceccaae9dd" sourceCollectionName="ProductionLines" name="ProductionLineReferencesWorkshop" targetFieldName="Workshop">
+            <xpObjectMoniker Id="61febe91-7a02-4c9e-a319-d8c71254e5e6" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="9f2f73e0-1c8b-4dc7-8c4c-551306558bdf">
+            <collectionField Id="5b4074ec-c6cc-490b-8f9e-886479d81498" name="ProductionLines" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="326bcef8-2b96-4bae-aced-8dd9df81f2d7">
+      <xpObject Id="61febe91-7a02-4c9e-a319-d8c71254e5e6" name="ProductionLine" baseClass="XPObject" userFileName="ProductionLine" designerFileName="ProductionLine.Designer" className="ProductionLine" virtualName="ProductionLine" customAttributes="DevExpress.Persistent.Base.DefaultClassOptions">
+        <fields>
+          <generalXpObjectHasFields Id="c8c49bd6-c1bf-4ee1-86e3-59b7297e74c5">
+            <field Id="0396e0b1-fc22-49d9-9c0b-1063b0196410" name="ProductionLineNo" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="10" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2fc49caf-fdd8-496a-a61e-6404cad354a5">
+            <field Id="71d88dd1-4561-4d1e-b8a2-11e93c28ee83" name="ProductionLineName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9b3ab546-8e99-4697-9215-cb1130a60de0">
+            <field Id="7d17932c-2801-42f7-aea7-a89a7b999b62" name="RemarkOfProductionLine" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="Unlimited" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="84aaf53a-88c9-450f-8772-c775a77d58fc">
+            <field Id="99f73d60-25a3-4955-8c86-f4ca8b94ba31" name="Workshop" virtualColumnType="Workshop" logicalType="Workshop" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="c010b131-e00a-41e7-8598-a58f3c58f1b0" sourceCollectionName="Stations" name="StationReferencesProductionLine" targetFieldName="ProductionLine">
+            <xpObjectMoniker Id="65d1281e-5340-4c63-996d-1a70ce5132b5" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="b6617d63-9812-4946-9878-3abe74ad0c74">
+            <collectionField Id="0a22ddfb-7790-4471-a139-9aaadb64c68a" name="Stations" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="7f8d74b3-83b9-4ad0-b0dd-6405c1ac7f4e">
+      <xpObject Id="65d1281e-5340-4c63-996d-1a70ce5132b5" name="Station" baseClass="XPObject" userFileName="Station" designerFileName="Station.Designer" className="Station" virtualName="Station" customAttributes="DevExpress.Persistent.Base.DefaultClassOptions">
+        <fields>
+          <generalXpObjectHasFields Id="5eda894a-d8a8-4f8f-860c-691c2d631dc0">
+            <field Id="3bed24f3-ec04-4825-b1f6-b2a1f5c9f754" name="StationNo" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="10" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="60307449-d406-4c69-ae1d-9c762e652aa7">
+            <field Id="bd23acc0-b9c8-4b18-8410-44c1b29bd701" name="StationName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5fc60441-ff62-4ee7-a408-e3c945a646a0">
+            <field Id="770dfce1-2d3d-4ec9-b8dd-5e7ae3796b49" name="RemarkOfStation" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="Unlimited" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e70eee7f-6f99-4e91-9564-1c7e203b0eea">
+            <field Id="a6eb29a8-af24-4744-bb66-7f76b05f09dc" name="ProductionLine" virtualColumnType="ProductionLine" logicalType="ProductionLine" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+</dataBaseObjectModel>

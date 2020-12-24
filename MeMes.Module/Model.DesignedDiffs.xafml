@@ -1,5 +1,79 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="MeMes">
+  <BOModel>
+    <Class Name="MeMes.Module.BusinessObjects.fts.Factory" Caption="工厂管理">
+      <OwnMembers>
+        <Member Name="FactoryName" Caption="工厂名称" />
+        <Member Name="FactoryNo" Caption="工厂编号" />
+        <Member Name="RemarkOfFactory" Caption="备注" />
+        <Member Name="Workshops" Caption="车间" />
+      </OwnMembers>
+    </Class>
+    <Class Name="MeMes.Module.BusinessObjects.fts.ProductionLine" Caption="产线管理">
+      <OwnMembers>
+        <Member Name="ProductionLineName" Caption="产线名称" />
+        <Member Name="ProductionLineNo" Caption="产线编号" />
+        <Member Name="RemarkOfProductionLine" Caption="备注" />
+        <Member Name="Stations" Caption="工位" />
+        <Member Name="Workshop" Caption="车间" />
+      </OwnMembers>
+    </Class>
+    <Class Name="MeMes.Module.BusinessObjects.fts.Station" Caption="工位管理">
+      <OwnMembers>
+        <Member Name="ProductionLine" Caption="产线" />
+        <Member Name="RemarkOfStation" Caption="备注" />
+        <Member Name="StationName" Caption="工位名称" />
+        <Member Name="StationNo" Caption="工位编号" />
+      </OwnMembers>
+    </Class>
+    <Class Name="MeMes.Module.BusinessObjects.fts.Workshop" Caption="车间管理">
+      <OwnMembers>
+        <Member Name="Fatory" Caption="工厂" />
+        <Member Name="ProductionLines" Caption="产线" />
+        <Member Name="RemarkOfWorkshop" Caption="备注" />
+        <Member Name="WorkshopName" Caption="车间名称" />
+        <Member Name="WorkshopNo" Caption="车间编号" />
+      </OwnMembers>
+    </Class>
+    <Class Name="MeMes.Module.BusinessObjects.MaterialAttributes">
+      <OwnMembers>
+        <Member Name="EffectiveDate" Size="0" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="20.2.4.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
+    <DetailView Id="MaterialAttributes_DetailView">
+      <Items>
+        <PropertyEditor Id="EffectiveDate" MaxLength="0" EditMask="" NullText="" />
+        <PropertyEditor Id="IsPriority" EditMask="1" />
+        <PropertyEditor Id="MinStockNum" EditMask="" DataSourceProperty="" />
+        <PropertyEditor Id="PackageNum" EditMask="" />
+        <PropertyEditor Id="UnitNum" EditMask="" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="MaterialAttributes" Caption="物料属性" RelativeSize="100">
+              <LayoutGroup Id="MaterialAttributes_col1" RelativeSize="49.930843706777317">
+                <LayoutItem Id="MaterialName" RelativeSize="5.32258064516129" />
+                <LayoutItem Id="MaterialTypes" RelativeSize="3.870967741935484" />
+                <LayoutItem Id="MinUnit" RelativeSize="3.870967741935484" />
+                <LayoutItem Id="UnitNum" RelativeSize="3.870967741935484" />
+                <LayoutItem Id="PackageUnit" RelativeSize="83.064516129032256" />
+              </LayoutGroup>
+              <LayoutGroup Id="MaterialAttributes_col2" RelativeSize="50.069156293222683">
+                <LayoutItem Id="PackageNum" RelativeSize="5.32258064516129" />
+                <LayoutItem Id="EffectiveDate" RelativeSize="3.870967741935484" />
+                <LayoutItem Id="MinStockNum" RelativeSize="3.870967741935484" />
+                <LayoutItem Id="IsPriority" RelativeSize="86.935483870967744" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
   </Views>
 </Application>

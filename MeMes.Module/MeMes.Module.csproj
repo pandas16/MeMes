@@ -47,6 +47,7 @@
     <Reference Include="DevExpress.ExpressApp.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.Xpo.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -68,6 +69,7 @@
     <Reference Include="System">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Drawing">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -83,6 +85,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\FactoryToStationCode\ConnectionHelper.cs" />
+    <Compile Include="BusinessObjects\FactoryToStationCode\Factory.cs" />
+    <Compile Include="BusinessObjects\FactoryToStationCode\Factory.Designer.cs">
+      <DependentUpon>Factory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\FactoryToStationCode\ProductionLine.cs" />
+    <Compile Include="BusinessObjects\FactoryToStationCode\ProductionLine.Designer.cs">
+      <DependentUpon>ProductionLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\FactoryToStationCode\Station.cs" />
+    <Compile Include="BusinessObjects\FactoryToStationCode\Station.Designer.cs">
+      <DependentUpon>Station.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\FactoryToStationCode\Workshop.cs" />
+    <Compile Include="BusinessObjects\FactoryToStationCode\Workshop.Designer.cs">
+      <DependentUpon>Workshop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\MaterialAttributes.cs" />
+    <Compile Include="BusinessObjects\MaterialMng.cs" />
+    <Compile Include="BusinessObjects\MaterialTypes.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>
@@ -94,8 +116,17 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Module.resx">
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BusinessObjects\FactoryToStation.xpo" />
+    <None Include="BusinessObjects\FactoryToStation.xpo.diagram">
+      <DependentUpon>FactoryToStation.xpo</DependentUpon>
+    </None>
     <None Include="BusinessObjects\ReadMe.txt" />
     <None Include="Controllers\ReadMe.txt" />
     <None Include="DatabaseUpdate\ReadMe.txt" />
@@ -119,4 +150,3 @@
   </Target>
   -->
 </Project>
-
