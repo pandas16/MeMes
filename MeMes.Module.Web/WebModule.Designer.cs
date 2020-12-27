@@ -28,6 +28,9 @@
             // 
             this.RequiredModuleTypes.Add(typeof(MeMes.Module.MeMesModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Web.SystemModule.SystemAspNetModule));
+            this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.TreeListEditors.Web.TreeListEditorsAspNetModule));
+            this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.TreeListEditors.TreeListEditorsModuleBase));
+
         }
 
         #endregion

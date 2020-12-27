@@ -6,13 +6,8 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
 using DevExpress.Xpo;
-using DevExpress.Xpo.Metadata;
-using DevExpress.Data.Filtering;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Reflection;
+using System;
 namespace MeMes.Module.BusinessObjects.fts
 {
     public static class ConnectionHelper

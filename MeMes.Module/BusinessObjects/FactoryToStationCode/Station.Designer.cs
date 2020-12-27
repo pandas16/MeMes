@@ -46,6 +46,12 @@ namespace MeMes.Module.BusinessObjects.fts
             get { return fProductionLine; }
             set { SetPropertyValue<ProductionLine>(nameof(ProductionLine), ref fProductionLine, value); }
         }
-    }
 
+        public string ProdLineNo {
+            get {
+                if (ProductionLine == null) return null;
+                return ProductionLine.ProductionLineNo;
+            }
+        }
+    }
 }

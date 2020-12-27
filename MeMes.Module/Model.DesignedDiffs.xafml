@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="MeMes">
   <BOModel>
+    <Class Name="MeMes.Module.BusinessObjects.BOM">
+      <OwnMembers>
+        <Member Name="ChildrenMaterial" DataSourceCriteriaProperty="" DataSourceCriteria="" />
+      </OwnMembers>
+    </Class>
     <Class Name="MeMes.Module.BusinessObjects.fts.Factory" Caption="工厂管理">
       <OwnMembers>
         <Member Name="FactoryName" Caption="工厂名称" />
@@ -28,6 +33,7 @@
     </Class>
     <Class Name="MeMes.Module.BusinessObjects.fts.Workshop" Caption="车间管理">
       <OwnMembers>
+        <Member Name="FactoryNo" Caption="工厂编号" />
         <Member Name="Fatory" Caption="工厂" />
         <Member Name="ProductionLines" Caption="产线" />
         <Member Name="RemarkOfWorkshop" Caption="备注" />
@@ -41,10 +47,140 @@
       </OwnMembers>
     </Class>
   </BOModel>
+  <NavigationItems DefaultLeafImageName="BO_Unknown">
+    <Items>
+      <Item Id="Default" Caption="默认">
+        <Items>
+          <Item Id="base" Caption="基础数据" Index="1" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="MaterialTypes_ListView" ViewId="MaterialTypes_ListView" ObjectKey="" Index="1" IsNewNode="True" />
+              <Item Id="MaterialMng_ListView" ViewId="MaterialMng_ListView" ObjectKey="" Index="2" IsNewNode="True" />
+              <Item Id="MaterialAttributes_ListView" ViewId="MaterialAttributes_ListView" ObjectKey="" Index="3" IsNewNode="True" />
+              <Item Id="Factory_ListView" ViewId="Factory_ListView" ObjectKey="" Index="4" IsNewNode="True" />
+              <Item Id="Workshop_ListView" ViewId="Workshop_ListView" ObjectKey="" Index="5" IsNewNode="True" />
+              <Item Id="ProductionLine_ListView" ViewId="ProductionLine_ListView" ObjectKey="" Index="6" IsNewNode="True" />
+              <Item Id="Station_ListView" ViewId="Station_ListView" ObjectKey="" Index="7" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="craft" Caption="工艺配方" Index="2" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="BOMVersion_ListView" ViewId="BOMVersion_ListView" ObjectKey="" Index="1" Caption="物料版本" IsNewNode="True" />
+              <Item Id="BOM_ListView" ViewId="BOM_ListView" ObjectKey="" Index="2" IsNewNode="True" />
+              <Item Id="CraftVersion_ListView" ViewId="CraftVersion_ListView" ObjectKey="" Index="3" IsNewNode="True" />
+              <Item Id="CraftLine_ListView" ViewId="CraftLine_ListView" ObjectKey="" Index="4" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="planMng" Caption="计划管理" Index="3" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="ProductPlan_ListView" ViewId="ProductPlan_ListView" ObjectKey="" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="BOM_ListView" Removed="True" />
+          <Item Id="BOMVersion_ListView" ViewId="BOMVersion_ListView" ObjectKey="" Removed="True" />
+          <Item Id="CraftLine_ListView" Removed="True" />
+          <Item Id="CraftVersion_ListView" Removed="True" />
+          <Item Id="equipment" Caption="设备管理" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="EquipmentType_ListView" ViewId="EquipmentType_ListView" ObjectKey="" IsNewNode="True" />
+              <Item Id="EquipmentUnit_ListView" ViewId="EquipmentUnit_ListView" ObjectKey="" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="EquipmentType_ListView" Removed="True" />
+          <Item Id="EquipmentUnit_ListView" Removed="True" />
+          <Item Id="Factory_ListView" Removed="True" />
+          <Item Id="MaterialAttributes_ListView" Removed="True" />
+          <Item Id="MaterialMng_ListView" Removed="True" />
+          <Item Id="MaterialTypes_ListView" Removed="True" />
+          <Item Id="ProductionLine_ListView" Removed="True" />
+          <Item Id="ProductPlan_ListView" Removed="True" />
+          <Item Id="Station_ListView" Removed="True" />
+          <Item Id="Workshop_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="20.2.4.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
+    <DetailView Id="BOM_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="19.155354449472096">
+            <LayoutGroup Id="BOM" Caption="物料清单" RelativeSize="100">
+              <LayoutGroup Id="BOM_col1" RelativeSize="49.931034482758619">
+                <LayoutItem Id="ParentMaterial" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="ChildrenMaterial" RelativeSize="26.666666666666668" />
+                <LayoutItem Id="VersionOfBOM" RelativeSize="36.666666666666664" />
+              </LayoutGroup>
+              <LayoutGroup Id="BOM_col2" RelativeSize="50.068965517241381">
+                <LayoutItem Id="MinUnit" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="Dose" RelativeSize="63.333333333333336" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="80.8446455505279">
+            <LayoutItem Id="RemarkOfBOM" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BOMVersion_DetailView" Caption="物料管理">
+      <Items>
+        <PropertyEditor Id="VersionOfBom" EditMask="该值由系统生成，请勿填写" NullText="" />
+      </Items>
+    </DetailView>
+    <ListView Id="BOMVersion_ListView" Caption="物料管理" MasterDetailMode="ListViewOnly" />
+    <DetailView Id="EquipmentType_DetailView">
+      <Items>
+        <PropertyEditor Id="Parent" Index="0" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="17.425742574257427">
+            <LayoutGroup Id="EquipmentType" RelativeSize="100">
+              <LayoutItem Id="Parent" Index="0" RelativeSize="37.5" />
+              <LayoutItem Id="Name" Index="1" RelativeSize="27.272727272727273" />
+              <LayoutItem Id="EqTypeNo" RelativeSize="35.227272727272727" Index="2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="41.188118811881189">
+            <LayoutItem Id="RemarkOfEqType" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="Children_Group" Direction="Vertical" RelativeSize="41.386138613861384">
+            <LayoutItem Id="Children" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="EquipmentUnit_DetailView">
+      <Items>
+        <PropertyEditor Id="EqType" Index="0" />
+        <PropertyEditor Id="Parent" Index="1" />
+        <PropertyEditor Id="Name" Index="2" />
+        <PropertyEditor Id="EqUnitNo" Index="3" />
+        <PropertyEditor Id="RemarkOfEqUnit" Index="4" />
+        <PropertyEditor Id="Children" Caption="子节点" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.89291101055807">
+            <LayoutGroup Id="EquipmentUnit" Caption="EquipmentUnit" Direction="Vertical" RelativeSize="100">
+              <LayoutItem Id="EqType" ViewItem="EqType" Index="0" RelativeSize="29.464285714285715" IsNewNode="True" Removed="True" />
+              <LayoutItem Id="Name" Index="1" RelativeSize="21.428571428571427" />
+              <LayoutItem Id="Parent" ViewItem="Parent" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" Removed="True" />
+              <LayoutItem Id="EqUnitNo" ViewItem="EqUnitNo" Index="3" RelativeSize="27.678571428571427" IsNewNode="True" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="39.668174962292611">
+            <LayoutItem Id="RemarkOfEqUnit" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="Children_Group" Direction="Vertical" RelativeSize="43.438914027149323">
+            <LayoutItem Id="Children" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="MaterialAttributes_DetailView">
       <Items>
         <PropertyEditor Id="EffectiveDate" MaxLength="0" EditMask="" NullText="" />
@@ -75,5 +211,10 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="MaterialAttributes_ListView" FreezeColumnIndices="False" Index="">
+      <Columns>
+        <ColumnInfo Id="MaterialName" Width="145" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>

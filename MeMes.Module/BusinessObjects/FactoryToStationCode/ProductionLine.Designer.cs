@@ -13,6 +13,8 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
+using DevExpress.Persistent.Base;
+
 namespace MeMes.Module.BusinessObjects.fts
 {
 
@@ -48,6 +50,14 @@ namespace MeMes.Module.BusinessObjects.fts
         }
         [Association(@"StationReferencesProductionLine")]
         public XPCollection<Station> Stations { get { return GetCollection<Station>(nameof(Stations)); } }
+
+        [VisibleInDetailView(false), NonPersistent]
+        public String WorkShopNo {
+            get {
+                if (Workshop == null) return null;
+                return Workshop.WorkshopNo;
+            }
+        }
     }
 
 }

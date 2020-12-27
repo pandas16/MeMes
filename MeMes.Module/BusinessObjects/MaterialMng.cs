@@ -37,7 +37,7 @@ namespace MeMes.Module.BusinessObjects
             set => SetPropertyValue(nameof(MaterialName), ref materialName, value);
         }
 
-        
+
         [Size(SizeAttribute.Unlimited), XafDisplayName("备注")]
         public string RemarkOfMaterialMng
         {

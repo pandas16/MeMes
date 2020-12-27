@@ -44,10 +44,15 @@
     <Reference Include="DevExpress.ExpressApp.Objects.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.Web.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.Win.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevExpress.ExpressApp.Validation.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Web.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.Win.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.ExpressApp.Xpo.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -60,9 +65,15 @@
     <Reference Include="DevExpress.Printing.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxTreeList.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="mscorlib">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -80,11 +91,19 @@
       <Name>System.Data</Name>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\BOM.cs" />
+    <Compile Include="BusinessObjects\BOMVersion.cs" />
+    <Compile Include="BusinessObjects\CraftLine.cs" />
+    <Compile Include="BusinessObjects\CraftVersion.cs" />
+    <Compile Include="BusinessObjects\EquipmentType.cs" />
+    <Compile Include="BusinessObjects\EquipmentUnit.cs" />
     <Compile Include="BusinessObjects\FactoryToStationCode\ConnectionHelper.cs" />
     <Compile Include="BusinessObjects\FactoryToStationCode\Factory.cs" />
     <Compile Include="BusinessObjects\FactoryToStationCode\Factory.Designer.cs">
@@ -105,6 +124,8 @@
     <Compile Include="BusinessObjects\MaterialAttributes.cs" />
     <Compile Include="BusinessObjects\MaterialMng.cs" />
     <Compile Include="BusinessObjects\MaterialTypes.cs" />
+    <Compile Include="BusinessObjects\EquipmentTree.cs" />
+    <Compile Include="BusinessObjects\ProductPlan.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>
