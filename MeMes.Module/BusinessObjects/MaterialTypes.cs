@@ -1,4 +1,5 @@
-﻿using DevExpress.ExpressApp.DC;
+﻿using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.DC;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
@@ -49,6 +50,21 @@ namespace MeMes.Module.BusinessObjects
         {
             get => remarkOfMaterialType;
             set => SetPropertyValue(nameof(RemarkOfMaterialType), ref remarkOfMaterialType, value);
+        }
+
+        [XafDisplayName("操作记录")]
+        private XPCollection<AuditDataItemPersistent> changeHistory;
+        [CollectionOperationSet(AllowAdd = false, AllowRemove = false)]
+        public XPCollection<AuditDataItemPersistent> ChangeHistory
+        {
+            get
+            {
+                if (changeHistory == null)
+                {
+                    changeHistory = AuditedObjectWeakReference.GetAuditTrail(Session, this);
+                }
+                return changeHistory;
+            }
         }
 
         public enum TypeLevelEnum

@@ -216,5 +216,22 @@
         <ColumnInfo Id="MaterialName" Width="145" />
       </Columns>
     </ListView>
+    <ListView Id="MaterialTypes_ChangeHistory_ListView">
+      <Columns>
+        <ColumnInfo Id="Description" Width="96" />
+        <ColumnInfo Id="NewValue" Width="96" />
+        <ColumnInfo Id="Oid" Width="96" />
+        <ColumnInfo Id="OldValue" Width="96" />
+        <ColumnInfo Id="UserName" Width="545" SortOrder="Descending" />
+        <ColumnInfo Id="ModifiedOn" Width="96" />
+        <ColumnInfo Id="OperationType" Width="96" />
+        <ColumnInfo Id="PropertyName" Width="96" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MaterialTypes_DetailView">
+      <Items>
+        <PropertyEditor Id="ChangeHistory" Caption="操作记录" />
+      </Items>
+    </DetailView>
   </Views>
 </Application>
